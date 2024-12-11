@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'todo',
     'accounts',
+    'rest_framework',
+    'django_filters',
 ]
 
 MIDDLEWARE = [

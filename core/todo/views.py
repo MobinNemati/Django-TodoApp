@@ -6,7 +6,7 @@ from django.views import View
 from .models import Task
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-
+    
 class TaskListView(LoginRequiredMixin, ListView):
     model = Task
     context_object_name = 'tasks'
