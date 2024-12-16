@@ -1,4 +1,4 @@
-from .serializers import TaskSeializer
+from .serializers import TaskSerializer
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated, IsAdminUser, IsAuthenticatedOrReadOnly
 from todo.models import Task
@@ -8,7 +8,7 @@ from todo.models import Task
 
 class TaskModelViewSt(viewsets.ModelViewSet):
     permission_classes = [IsAuthenticated]
-    serializer_class = TaskSeializer
+    serializer_class = TaskSerializer
     def get_queryset(self):
         return Task.objects.filter(user=self.request.user)   
 

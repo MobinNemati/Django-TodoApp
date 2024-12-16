@@ -4,7 +4,7 @@ from todo.models import Task
 
 
 
-class TaskSeializer(serializers.ModelSerializer):
+class TaskSerializer(serializers.ModelSerializer):
 
     absolute_url = serializers.SerializerMethodField()
 
